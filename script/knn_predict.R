@@ -1,5 +1,5 @@
 #- set working directory 
-#setwd("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak\\dataknn")
+setwd("D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak\\dataknn")
 options(scipen = 999)
 
 #- Load required libraries
@@ -16,7 +16,7 @@ registerDoParallel(cores=8)
 
 
 #- Import Data
-data = read.csv("dataset/Gempa_Tsunami_BMKG_Bathy_Jarak.csv", stringsAsFactors = F)
+data = read.csv("Gempa_Tsunami_BMKG_Bathy_Jarak.csv", stringsAsFactors = F)
 
 # - Univariate Analysis
 # Tsunami and no tsunami in data set - Fair representation of both outcomes
@@ -151,5 +151,5 @@ confusionMatrix(factor(test$Predicted),
                 factor(test$Actual))
 
 # save the model to disk
-saveRDS(knn, "output/final_model_knn_predict_jarak.rds")
+saveRDS(knn, "D:\\Documents\\Study and small Project training\\project_tsunami\\test\\Jarak\\bmkg\\final_model_knn_predict_jarak.rds")
 
